@@ -96,7 +96,7 @@ class Cache
         //$f = md5( strtolower( $key ) );
         $f = parse_url($key)['host'];
 
-        $a = $dir . '/' . $f . '.txt';
+        $a = $dir . '/' . $f . '.ico';
 
         if(is_file($a)){
             $data = file_get_contents($a);
@@ -129,7 +129,7 @@ class Cache
         //$f = md5( strtolower( $key ) );
         $f = parse_url($key)['host'];
 
-        $a = $dir . '/' . $f . '.txt';
+        $a = $dir . '/' . $f . '.ico';
         
         //如果缓存目录不存在则创建
         if (!is_dir($dir)) mkdir($dir,0777,true) or die('创建缓存目录失败！');
